@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>БТС — подготовка к экзамену</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/mhchem.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0e14;--c1:#141926;--c2:#1d2433;--bd:#2b3448;--tx:#e6e9f2;--mu:#8d97ad;--ac:#6366f1;--ac2:#8b5cf6}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1100px 480px at 70% -10%,#2a236655,transparent),var(--bg);color:var(--tx);font:15px/1.55 Manrope,'Segoe UI',system-ui,sans-serif}
+header{position:sticky;top:0;z-index:5;display:flex;gap:10px;align-items:center;padding:10px 18px;background:#0b0e14cc;backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.logo{font-weight:800;display:flex;gap:8px;align-items:center;cursor:pointer}.logo i{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font-style:normal}
+nav{display:flex;gap:6px;overflow:auto;flex:1}.pill{padding:6px 12px;border-radius:99px;border:1px solid var(--bd);background:var(--c1);color:var(--mu);cursor:pointer;white-space:nowrap;font:inherit;font-size:13px;font-weight:600}.pill.on{color:#fff;background:var(--c);border-color:transparent}
+#main{max-width:980px;margin:0 auto;padding:22px 18px 60px}
+h1{font-size:26px;margin:0 0 6px;font-weight:800}h2,h3,h4{margin:18px 0 8px}.mu{color:var(--mu)}.center{text-align:center}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:20px 0}
+.card{background:var(--c1);border:1px solid var(--bd);border-radius:18px;padding:18px;margin:12px 0}
+.sub{cursor:pointer;margin:0;transition:.2s}.sub:hover{transform:translateY(-3px);border-color:var(--c)}
+.sub .ic,.hero span{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--c);margin-bottom:12px}
+.hero{display:flex;gap:16px;align-items:center;padding:20px;border-radius:22px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 35%,#0b0e14),var(--c1));border:1px solid var(--bd);margin-bottom:16px}.hero span{margin:0}.hero h1{margin:0}
+.tabs{display:flex;gap:6px;overflow:auto;margin-bottom:12px}.tabs button{font:inherit;font-weight:700;font-size:13px;padding:8px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--c1);color:var(--mu);cursor:pointer;white-space:nowrap}.tabs .on{background:var(--c);color:#fff;border-color:transparent}
+textarea{width:100%;background:var(--c2);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;color:var(--tx);font:inherit;font-family:monospace;font-size:12px;min-height:120px;resize:vertical}
+.btn{border:0;border-radius:12px;padding:11px 20px;font:inherit;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--c,var(--ac)),var(--ac2));cursor:pointer}.btn.g2{background:var(--c2);border:1px solid var(--bd)}.btn:disabled{opacity:.35;cursor:default}
+.row{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:12px 0}
+.warn{border-color:#f59e0b;background:#f59e0b14}
+.top{display:flex;justify-content:space-between;margin-bottom:8px}.navg{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.navg i{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:var(--c2);font-style:normal;font-size:12px;cursor:pointer;font-weight:700}.navg .don{background:#22c55e33;color:#4ade80}.navg .cur{background:var(--c);color:#fff}
+.q{font-size:17px;font-weight:600;white-space:pre-line}.fig{width:100%;max-width:320px;background:#0007;border-radius:10px;margin:8px 0;display:block}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:640px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;gap:10px;text-align:left;font:inherit;color:var(--tx);background:var(--c1);border:1px solid var(--bd);border-radius:14px;padding:13px;cursor:pointer}.opt:hover{border-color:var(--c)}.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 18%,var(--c1))}.opt b{color:var(--c)}
+.big{font-size:64px;font-weight:800;background:linear-gradient(135deg,var(--c,#6366f1),var(--ac2));-webkit-background-clip:text;color:transparent}
+.rv.ok{border-color:#22c55e66}.rv.no{border-color:#ef444466}.only .rv.ok{display:none}
+.bar{height:6px;background:var(--c2);border-radius:9px;margin:10px 0 18px}.bar u{display:block;height:100%;border-radius:9px;background:var(--c)}
+.flip{perspective:1000px;height:260px;cursor:pointer}.fi{position:relative;height:100%;transition:transform .5s;transform-style:preserve-3d}.flip.on .fi{transform:rotateY(180deg)}
+.ff{position:absolute;inset:0;margin:0;display:grid;place-content:center;text-align:center;backface-visibility:hidden;font-size:20px;font-weight:700}.ff small{color:var(--mu);font-size:11px;text-transform:uppercase;letter-spacing:.1em}.fb{transform:rotateY(180deg);background:linear-gradient(135deg,color-mix(in srgb,var(--c) 55%,#000),var(--c1))}
+.note table{border-collapse:collapse;width:100%;margin:10px 0}.note th,.note td{border:1px solid var(--bd);padding:7px 10px;text-align:left}.note li{margin:4px 0}.note h2,.note h3{color:var(--c)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1d2433;border:1px solid var(--bd);padding:12px 18px;border-radius:12px;z-index:9}
+details summary{cursor:pointer}
+.figbox{text-align:center}.figbox .fig{margin:10px auto;max-width:460px}.figbox .fig.wide{max-width:100%}
+.figbox .fig.pic,.fig.pic{max-width:520px;background:#fff;border-radius:10px}.ff .fig.pic{max-height:150px;width:auto;max-width:90%;margin:6px auto}
+.bar u{transition:width .35s}.bar.k{height:4px;margin:-12px 0 18px}
+.hero{flex-wrap:wrap}.tl{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.tl .btn{padding:9px 14px;font-size:13px}.btn.act{outline:2px solid var(--c,#6366f1);outline-offset:1px}
+#ann{position:absolute;left:0;top:0;z-index:4;pointer-events:none;touch-action:none}
+#annbar{display:none;position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:16;max-width:96vw;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;background:#141926f2;border:1px solid var(--bd);border-radius:16px;padding:8px 10px;backdrop-filter:blur(10px);box-shadow:0 8px 30px #000a}
+#annbar button{font:inherit;font-size:14px;min-width:34px;height:34px;padding:0 8px;border-radius:10px;border:1px solid var(--bd);background:var(--c2);color:var(--tx);cursor:pointer}
+#annbar button.act{outline:2px solid #fff}#annbar .sw{min-width:26px;width:26px;height:26px;padding:0;border-radius:50%}
+#annbar input[type=color]{width:34px;height:34px;padding:0;border:1px solid var(--bd);border-radius:10px;background:none;cursor:pointer}#annbar input[type=range]{width:90px}
+#annbar .sep{width:1px;height:24px;background:var(--bd)}#annpv{display:inline-block;border-radius:50%;flex:none;border:1px solid #fff6}
+#calc{display:none;position:fixed;right:14px;bottom:14px;z-index:15;width:min(94vw,290px);background:#141926f7;border:1px solid var(--bd);border-radius:18px;padding:12px;box-shadow:0 10px 36px #000b}
+#calc .ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}#calc .ch button{background:none;border:0;color:var(--mu);font-size:18px;cursor:pointer}
+#calc input{width:100%;background:var(--c2);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;color:var(--tx);font:600 20px monospace;text-align:right}
+#cout{min-height:22px;text-align:right;color:var(--mu);font:13px monospace;margin:6px 2px 8px;overflow-wrap:anywhere}#cout.err{color:#f87171}
+.ck{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.ck button{font:inherit;font-weight:700;font-size:14px;padding:8px 0;border-radius:10px;border:1px solid var(--bd);background:var(--c2);color:var(--tx);cursor:pointer}
+.ck button.n{background:#262f45}.ck button.op{background:#2b3250;color:#a5b4fc}.ck button.eq{background:var(--c,#6366f1);border:0;color:#fff}.ck button:active{transform:scale(.95)}
+</style></head>
+<body>
+<header id="hd"></header><main id="main"></main>
+<script>
+const SUBS=[
+{id:'algebra',n:'Algebra',ru:'Алгебра',e:'∑',c:'#6366f1'},
+{id:'biology',n:'Biology',ru:'Биология',e:'🧬',c:'#22c55e'},
+{id:'qazaq',n:'Қазақ тілі',ru:'Казахский язык',e:'📖',c:'#f59e0b',kk:1},
+{id:'chemistry',n:'Chemistry',ru:'Химия',e:'⚗',c:'#a855f7'},
+{id:'physics',n:'Physics',ru:'Физика',e:'⚛',c:'#06b6d4'},
+{id:'history',n:'Қазақстан тарихы',ru:'История Казахстана',e:'🏛',c:'#ef4444',kk:1}];
+const S={sub:null,tab:'test',run:null,deck:null};
+const $=s=>document.querySelector(s),M=$('#main');
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const kx=()=>window.renderMathInElement&&renderMathInElement(M,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});
+const toast=t=>{const e=document.createElement('div');e.className='toast';e.textContent=t;document.body.appendChild(e);setTimeout(()=>e.remove(),4000)};
+/* ---------- figures ---------- */
+const st=r=>{const d=r/8,m=10**Math.floor(Math.log10(d));return[1,2,5,10].map(k=>k*m).find(k=>k>=d)};
+const cf=s=>{s=String(s).replace(/\^/g,'**');if(/[^\dxy\s.+\-*/()]/.test(s.replace(/sqrt|abs|sin|cos|ln|exp|pi/g,'')))return()=>NaN;try{const f=Function('x','y','sqrt','abs','sin','cos','ln','exp','pi','return('+s+')');return(x,y)=>f(x,y,Math.sqrt,Math.abs,Math.sin,Math.cos,Math.log,Math.exp,Math.PI)}catch(e){return()=>NaN}};
+function fig(g){if(g&&g.img){const u=String((window.IMG||{})[g.img]||g.img).replace(/"/g,'');return `<img class="fig wide pic" src="${u}" alt="">`}
+ if(!g||!Array.isArray(g.x)||!Array.isArray(g.y))return'';
+ const W=280,H=210,[a,b]=g.x,[c,d]=g.y,X=x=>(x-a)/(b-a)*W,Y=y=>H-(y-c)/(d-c)*H,gx=st(b-a),gy=st(d-c);let s='';
+ for(let v=Math.ceil(a/gx)*gx;v<=b+1e-9;v+=gx)s+=`<path d="M${X(v)} 0V${H}" stroke="#8884"/><text x="${X(v)+2}" y="${Math.min(Math.max(Y(0)+10,10),H-2)}" font-size="9" fill="#9aa">${+v.toFixed(2)}</text>`;
+ for(let v=Math.ceil(c/gy)*gy;v<=d+1e-9;v+=gy)s+=`<path d="M0 ${Y(v)}H${W}" stroke="#8884"/><text x="${Math.min(Math.max(X(0)+3,0),W-18)}" y="${Y(v)-2}" font-size="9" fill="#9aa">${+v.toFixed(2)}</text>`;
+ const sh=[].concat(g.shade||[]).map(t=>{const p=String(t).split(/(<=|>=|<|>)/);return[cf(p[0]),p[1],cf(p[2])]});
+ if(sh.length){const cv=document.createElement('canvas');cv.width=W;cv.height=H;const k=cv.getContext('2d');k.fillStyle='rgba(129,140,248,.45)';
+  for(let i=0;i<W;i+=2)for(let j=0;j<H;j+=2){const x=a+(i+1)/W*(b-a),y=d-(j+1)/H*(d-c);if(sh.every(([f,o,h])=>{const u=f(x,y),v=h(x,y);return o=='>'?u>v:o=='<'?u<v:o=='>='?u>=v:u<=v}))k.fillRect(i,j,2,2)}
+  s+=`<image href="${cv.toDataURL()}" width="${W}" height="${H}"/>`}
+ s+=`<path d="M0 ${Y(0)}H${W}M${X(0)} 0V${H}" stroke="#bbb" stroke-width="1.3"/>`;
+ [].concat(g.fn||[]).forEach(o=>{const f=cf(o.f);let p='',u=0;for(let i=0;i<=200;i++){const x=a+i/200*(b-a),y=f(x,0);if(isFinite(y)&&Math.abs(y-(c+d)/2)<4*(d-c)){p+=(u?'L':'M')+X(x).toFixed(1)+' '+Y(y).toFixed(1);u=1}else u=0}s+=`<path d="${p}" fill="none" stroke="#a5b4fc" stroke-width="2"${o.d?' stroke-dasharray="6 4"':''}/>`});
+ [].concat(g.ci||[]).forEach(o=>s+=`<ellipse cx="${X(o[0])}" cy="${Y(o[1])}" rx="${o[2]*W/(b-a)}" ry="${o[2]*H/(d-c)}" fill="none" stroke="#a5b4fc" stroke-width="2"${o[3]?' stroke-dasharray="6 4"':''}/>`);
+ if(g.lx)s+=`<text x="${W-4}" y="${H-4}" text-anchor="end" font-size="11" fill="#cbd5e1">${esc(g.lx)}</text>`;
+ if(g.ly)s+=`<text x="4" y="12" font-size="11" fill="#cbd5e1">${esc(g.ly)}</text>`;
+ [].concat(g.vl||[]).forEach(o=>s+=`<path d="M${X(o.v)} 0V${H}" stroke="#a5b4fc" stroke-width="2"${o.d?' stroke-dasharray="6 4"':''}/>`);
+ [].concat(g.pl||[]).forEach(l=>s+=`<polyline points="${l.map(p=>X(p[0])+','+Y(p[1])).join(' ')}" fill="none" stroke="#f472b6" stroke-width="2.4"/>`);
+ [].concat(g.pt||[]).forEach(p=>s+=`<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="3.5" fill="#fbbf24"/>`);
+ [].concat(g.ar||[]).forEach(r=>s+=`<path d="M${X(r[0])} ${Y(r[1])}L${X(r[2])} ${Y(r[3])}" stroke="#34d399" stroke-width="2" marker-end="url(#ah)"/><text x="${X(r[2])+4}" y="${Y(r[3])-4}" font-size="11" fill="#34d399">${esc(r[4]||'')}</text>`);
+ return `<svg class="fig" viewBox="0 0 ${W} ${H}"><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#34d399"/></marker></defs>${s}</svg>`}
+/* ---------- markdown ---------- */
+function flow(t){const R=t.trim().split('\n').map(l=>l.split('->').map(x=>x.trim()).filter(Boolean)).filter(r=>r.length);if(!R.length)return'';
+ const W=560,gp=26,n=Math.max(...R.map(r=>r.length)),bw=(W-gp*(n-1))/n,cpl=Math.max(6,Math.floor(bw/5.6));
+ const wr=x=>{const o=[];let c='';x.split(' ').forEach(w=>{if(c&&(c+' '+w).length>cpl){o.push(c);c=w}else c=c?c+' '+w:w});o.push(c);return o};
+ const Ls=R.map(r=>r.map(wr)),mx=Math.max(...Ls.flat().map(a=>a.length)),bh=14+13*mx,rh=bh+20;let s='';
+ R.forEach((r,j)=>{const y=j*rh+4;r.forEach((x,i)=>{const X=i*(bw+gp),L=Ls[j][i],y0=y+(bh-13*L.length)/2+10;
+  s+=`<rect x="${X}" y="${y}" width="${bw}" height="${bh}" rx="10" fill="#6366f133" stroke="#818cf8"/>`+L.map((a,k)=>`<text text-anchor="middle" font-size="10.5" fill="#e6e9f2" x="${X+bw/2}" y="${y0+13*k}">${esc(a)}</text>`).join('');
+  if(i)s+=`<path d="M${X-gp+3} ${y+bh/2}H${X-3}" stroke="#34d399" stroke-width="2" marker-end="url(#fa)"/>`})});
+ return `<svg class="fig wide" viewBox="0 0 ${W} ${R.length*rh}"><defs><marker id="fa" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#34d399"/></marker></defs>${s}</svg>`}
+function md(t){const Z=[],F=[];t=t.replace(/```(fig|flow)\n([\s\S]*?)```/g,(m,k,b)=>{let h='';try{h=k=='fig'?fig(JSON.parse(b)):flow(b)}catch(e){h='<p class="mu">[ошибка рисунка]</p>'}return '\n\u0002'+(F.push('<div class="figbox">'+h+'</div>')-1)+'\u0002\n'});t=t.replace(/\$\$[\s\S]+?\$\$|\$[^$\n]+?\$/g,m=>'\u0001'+(Z.push(m)-1)+'\u0001');
+ const I=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>');let o='',L=null,T=0;
+ const cl=()=>{if(L){o+='</'+L+'>';L=null}if(T){o+='</table>';T=0}};
+ for(const l of t.split('\n')){let m;if(/^\u0002\d+\u0002$/.test(l.trim())){cl();o+=l.trim();continue}
+  if(m=l.match(/^(#{1,3})\s+(.*)/)){cl();const h=m[1].length+1;o+=`<h${h}>${I(m[2])}</h${h}>`}
+  else if(m=l.match(/^\s*([-*]|\d+\.)\s+(.*)/)){const k=/\d/.test(m[1])?'ol':'ul';if(L!=k){cl();o+='<'+k+'>';L=k}o+='<li>'+I(m[2])+'</li>'}
+  else if(/^\s*\|/.test(l)){if(/^[\s|:-]+$/.test(l))continue;if(L)cl();const h=!T;if(h){o+='<table>';T=1}o+='<tr>'+l.trim().replace(/^\||\|$/g,'').split('|').map(x=>`<${h?'th':'td'}>${I(x.trim())}</${h?'th':'td'}>`).join('')+'</tr>'}
+  else{cl();if(l.trim())o+='<p>'+I(l)+'</p>'}}
+ cl();return o.replace(/\u0001(\d+)\u0001/g,(_,i)=>esc(Z[i])).replace(/\u0002(\d+)\u0002/g,(_,i)=>F[i])}
+/* ---------- navigation ---------- */
+function nav(){$('#hd').innerHTML=`<div class="logo" onclick="home()"><i>Б</i>БТС</div><nav>${SUBS.map(s=>`<button class="pill ${S.sub&&S.sub.id==s.id?'on':''}" style="--c:${s.c}" onclick="go('${s.id}')">${s.e} ${s.n}</button>`).join('')}</nav>`}
+function home(){S.sub=null;S.run=S.deck=null;nav();M.innerHTML=`<h1>Подготовка к БТС</h1><p class="mu">Выберите предмет. Материалы присылаете в чат — получаете JSON с тестом или карточками и вставляете его сюда.</p><div class="g">${SUBS.map(s=>`<div class="card sub" style="--c:${s.c}" onclick="go('${s.id}')"><div class="ic">${s.e}</div><b>${s.n}</b><div class="mu">${s.ru}</div></div>`).join('')}</div>`}
+function go(id,tab){S.sub=SUBS.find(s=>s.id==id);S.tab=tab||S.tab||'test';view()}
+const TABS=[['test','Тест'],['cards','Карточки'],['note','Конспект'],['mat','Материалы']];
+const KEY=id=>'bts:'+id;
+let LS=null;try{localStorage.setItem('_t','1');localStorage.removeItem('_t');LS=localStorage}catch(e){}
+const MEM={};
+const rd=k=>{try{return LS?LS.getItem(k):MEM[k]||null}catch(e){return MEM[k]||null}};
+const rm=k=>{try{LS&&LS.removeItem(k)}catch(e){}delete MEM[k]};
+const ld=()=>{try{return JSON.parse(rd(KEY(S.sub.id)))||{}}catch(e){return{}}};
+function ask(msg,ok){const o=document.createElement('div');o.style.cssText='position:fixed;inset:0;background:#000a;z-index:20;display:grid;place-items:center;padding:18px';o.innerHTML=`<div class="card" style="max-width:380px;margin:0"><p style="margin:0 0 14px">${esc(msg)}</p><div class="row" style="margin:0"><button class="btn g2" id="n">Отмена</button><button class="btn" id="y">Да</button></div></div>`;document.body.appendChild(o);o.querySelector('#n').onclick=()=>o.remove();o.querySelector('#y').onclick=()=>{o.remove();ok()}}
+const sv=(k,v)=>{const d=ld();if(v==null)delete d[k];else d[k]=v;const s=JSON.stringify(d);try{if(LS)LS.setItem(KEY(S.sub.id),s);else MEM[KEY(S.sub.id)]=s}catch(e){toast('Не удалось сохранить: память браузера заполнена')}};
+const clr=(k,msg)=>{const go=()=>{sv(k,null);view()};msg?ask(msg,go):go()};
+function resetSub(){ask('Сбросить всё по предмету «'+S.sub.n+'»: тест, карточки и конспект? Это нельзя отменить.',()=>{rm(KEY(S.sub.id));annDrop(S.sub.id);S.run=S.deck=null;window.IMG={};toast('Предмет сброшен');view()})}
+function shell(b){const s=S.sub,t=S.tab;M.style.setProperty('--c',s.c);
+ M.innerHTML=`<div class="hero"><span>${s.e}</span><div><h1>${s.n}</h1><div class="mu">${s.ru}</div></div><div class="tl">${CALC.includes(s.id)?'<button class="btn g2" onclick="calcToggle()">🧮 Калькулятор</button>':''}<button class="btn g2" onclick="annToggle()">✏️ Аннотация</button><button class="btn g2" onclick="resetSub()">🗑 Reset</button></div></div><div class="tabs">${TABS.map(([k,l])=>`<button class="${k==t?'on':''}" onclick="S.tab='${k}';view()">${l}</button>`).join('')}</div>${b}`}
+function view(){S.run=S.deck=null;document.body.classList.remove('only');nav();
+ const s=S.sub,t=S.tab,d=ld();
+ if(t=='test'&&d.test){S.run=d.test;window.IMG=d.test.imgs||{};S.run.done?res():runQ();return}
+ if(t=='cards'&&d.deck){S.deck={c:d.deck.c,q:d.deck.q,kn:d.deck.kn,s:new Set(d.deck.s)};window.IMG=d.deck.imgs||{};card();return}
+ if(t=='note'&&d.note){showNote(d.note);return}
+ let b='';
+ if(t=='mat'){b=`<div class="card"><b>Как это работает</b><ol class="mu" style="margin:8px 0 0 18px;padding:0"><li>Пришлите материал в чат (текст, фото страницы, тему).</li><li>Я верну JSON с тестом или карточками.</li><li>Вставьте JSON на вкладке «Тест» или «Карточки» и нажмите «Загрузить».</li><li>Всё сохраняется в браузере (тест, карточки, конспект), пока вы не нажмёте «🗑 Reset» у предмета.</li></ol></div>
+ <details class="card"><summary><b>Формат JSON для теста</b></summary><pre style="white-space:pre-wrap;font-size:11px" class="mu">{
+  "qs": [
+    {
+      "q": "Текст вопроса, формулы в $...$",
+      "fig": null,
+      "o": {"A": "вариант", "B": "вариант", "C": "вариант", "D": "вариант"},
+      "c": "B",
+      "e": "Пояснение верного ответа"
+    }
+  ]
+}</pre></details>
+ <details class="card"><summary><b>Формат JSON для карточек</b></summary><pre style="white-space:pre-wrap;font-size:11px" class="mu">{
+  "cards": [
+    {"f": "Спереди: термин или вопрос", "b": "Сзади: ответ"}
+  ]
+}</pre></details>
+ <details class="card"><summary><b>Формат JSON для конспекта</b></summary><pre style="white-space:pre-wrap;font-size:11px" class="mu">{"note": "Markdown-текст конспекта"}
+
+График из данных: блок &#96;&#96;&#96;fig с JSON {"x":[-5,5],"y":[-4,4],"fn":[{"f":"x^2-1"}],"shade":["y>x^2-1"],"pt":[[0,-1]],"ci":[[0,0,2]]} и закрывающие &#96;&#96;&#96;.
+Картинка: блок &#96;&#96;&#96;fig с JSON {"img":"ключ"} (ключ берётся из поля "imgs" в JSON; поле "imgs" работает и в тесте, и в карточках — у карточки добавьте "i":"ключ", у вопроса "fig":{"img":"ключ"}).
+Схема из текста: блок &#96;&#96;&#96;flow со строками вида «шаг 1 -> шаг 2 -> шаг 3» и закрывающие &#96;&#96;&#96;.</pre></details>`}
+ else if(t=='test'){b=`<div class="card"><b>Вставьте JSON теста</b> (полученный в чате)<textarea id="js" placeholder='{"qs":[...]}'></textarea><div class="row"><span class="mu">Или загрузите .json файл:</span><input type="file" accept=".json" onchange="loadF(this)"></div><button class="btn" onclick="loadTest()">▶ Начать тест</button></div>`}
+ else if(t=='cards'){b=`<div class="card"><b>Вставьте JSON карточек</b> (полученный в чате)<textarea id="js" placeholder='{"cards":[...]}'></textarea><div class="row"><span class="mu">Или загрузите .json файл:</span><input type="file" accept=".json" onchange="loadF(this)"></div><button class="btn" onclick="loadCards()">▶ Начать повторение</button></div>`}
+ else{b=`<div class="card"><b>Вставьте JSON конспекта</b> (полученный в чате)<textarea id="js" placeholder='{"note":"..."}'></textarea><div class="row"><span class="mu">Или загрузите .json файл:</span><input type="file" accept=".json" onchange="loadF(this)"></div><button class="btn" onclick="loadNote()">Показать конспект</button></div><div id="out"></div>`}
+ shell(b)}
+function loadF(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$('#js').value=r.result;toast('Файл загружен в поле')};r.readAsText(f)}
+const pj=()=>{try{return JSON.parse($('#js').value)}catch(e){toast('Ошибка JSON: '+e.message);return null}};
+const okq=q=>q&&q.q&&q.o&&typeof q.c=='string'&&'ABCD'.includes(q.c)&&[...'ABCD'].every(k=>String(q.o[k]==null?'':q.o[k]).trim());
+function loadTest(){const d=pj();if(!d)return;window.IMG=d.imgs||{};const qs=[].concat(d.qs||[]).filter(okq);if(!qs.length){toast('В JSON нет корректных вопросов');return}
+ S.run={qs,cur:0,ans:{},t0:Date.now(),imgs:window.IMG};runQ()}
+function loadCards(){const d=pj();if(!d)return;window.IMG=d.imgs||{};const c=[].concat(d.cards||[]).filter(x=>x&&x.f&&x.b);if(!c.length){toast('В JSON нет карточек');return}
+ S.deck={c,q:c.map((_,i)=>i),kn:0,s:new Set()};card()}
+function loadNote(){const d=pj();if(!d)return;if(!d.note){toast('В JSON нет поля "note"');return}const n={note:String(d.note),imgs:d.imgs||{}};sv('note',n);showNote(n)}
+function showNote(n){window.IMG=n.imgs||{};shell(`<div class="card note">${md(n.note)}</div><div class="row"><span class="mu">Сохранено — останется после перезагрузки</span><button class="btn g2" onclick="clr('note','Заменить конспект?')">Заменить конспект</button></div>`);kx()}
+/* ---------- test runner ---------- */
+const SHEET=`<details class="card"><summary><b>Шпаргалка (как в экзамене)</b></summary><p>$A_x=A\\cos\\theta,\\ A_y=A\\sin\\theta$ · $\\sin30°=\\cos60°=0{,}5$, $\\sin37°=\\cos53°=0{,}6$, $\\sin45°=\\cos45°=\\frac{\\sqrt2}{2}$, $\\sin53°=\\cos37°=0{,}8$, $\\sin60°=\\cos30°=\\frac{\\sqrt3}{2}$</p><p>$x=x_0+v_0t+\\frac{at^2}{2}$, $v=v_0+at$, $v^2=v_0^2+2a\\Delta x$ · падение: $h=\\frac{gt^2}{2}$, $v=gt$, $v^2=2gh$</p><p>$\\pi\\ rad=180°$, $v=\\frac{2\\pi r}{T}$, $\\omega=\\frac{2\\pi}{T}$, $f=\\frac1T$, $a_c=\\frac{v^2}{r}$, $a^2+b^2=c^2$ · в задачах $g=10\\ m/s^2$</p></details>`;
+function runQ(){const r=S.run,q=r.qs[r.cur];sv('test',r);
+ shell(`<div class="top"><b>Тест · ${S.sub.n}</b><span class="mu">${r.cur+1}/${r.qs.length} · <a href="#" class="mu" onclick="clr('test','Сбросить этот тест?');return false">✕ сбросить</a></span></div>${S.sub.id=='physics'?SHEET:''}
+ <div class="navg">${r.qs.map((_,i)=>`<i class="${i==r.cur?'cur':r.ans[i]?'don':''}" onclick="S.run.cur=${i};runQ()">${i+1}</i>`).join('')}</div>
+ <div class="card"><div class="q">${esc(q.q)}</div>${fig(q.fig)}</div>
+ <div class="opts">${['A','B','C','D'].map(k=>`<button class="opt ${r.ans[r.cur]==k?'sel':''}" onclick="S.run.ans[S.run.cur]='${k}';runQ()"><b>${k}</b><span>${esc(q.o[k])}${q.of&&q.of[k]?fig(q.of[k]):''}</span></button>`).join('')}</div>
+ <div class="row"><button class="btn g2" ${r.cur?'':'disabled'} onclick="S.run.cur--;runQ()">← Назад</button>${r.cur<r.qs.length-1?'<button class="btn" onclick="S.run.cur++;runQ()">Далее →</button>':'<button class="btn" onclick="fin()">Завершить ✓</button>'}</div>`);kx();scrollTo(0,0)}
+function fin(){const r=S.run,n=r.qs.length,un=n-Object.keys(r.ans).length,go=()=>{r.done=1;r.t1=Date.now();res()};un?ask('Без ответа: '+un+'. Завершить?',go):go()}
+function res(){const r=S.run,n=r.qs.length;sv('test',r);
+ const ok=r.qs.filter((q,i)=>r.ans[i]==q.c).length;
+ shell(`<div class="center"><div class="big">${Math.round(ok/n*100)}%</div><p class="mu">${ok} из ${n} верно · ${Math.max(1,Math.round(((r.t1||Date.now())-r.t0)/60000))} мин</p></div><label class="mu"><input type="checkbox" onchange="document.body.classList.toggle('only',this.checked)"> Показать только ошибки</label>
+ ${r.qs.map((q,i)=>{const g=r.ans[i]==q.c;return `<div class="card rv ${g?'ok':'no'}"><b>${i+1}. ${g?'✅':'❌'}</b><div class="q">${esc(q.q)}</div>${fig(q.fig)}<p class="mu">Ваш ответ: ${r.ans[i]||'—'} · Верный: <b>${q.c}</b> — ${esc(q.o[q.c])}${q.of&&q.of[q.c]?fig(q.of[q.c]):''}</p><p>💡 ${esc(q.e)}</p></div>`}).join('')}
+ <div class="row"><button class="btn" onclick="clr('test')">Новый тест</button></div>`);kx();scrollTo(0,0)}
+/* ---------- flashcards ---------- */
+function card(){const d=S.deck,save=()=>sv('deck',{c:d.c,q:d.q,kn:d.kn,s:[...d.s],imgs:window.IMG});
+ if(!d.q.length){save();shell(`<div class="center"><div class="big">🎉</div><h2>Все ${d.c.length} карточек выучены!</h2><div class="row" style="justify-content:center"><button class="btn" onclick="S.deck.q=S.deck.c.map((_,i)=>i);S.deck.kn=0;S.deck.s=new Set();card()">Повторить заново</button><button class="btn g2" onclick="clr('deck')">Загрузить другие</button></div></div>`);return}
+ const c=d.c[d.q[0]];d.s.add(d.q[0]);save();
+ shell(`<div class="top"><b>Карточки · ${S.sub.n}</b><span class="mu">Карточка ${d.s.size} / ${d.c.length} · выучено ${d.kn} · <a href="#" class="mu" onclick="clr('deck','Сбросить карточки?');return false">✕ сбросить</a></span></div><div class="bar"><u style="width:${d.s.size/d.c.length*100}%"></u></div><div class="bar k"><u style="width:${d.kn/d.c.length*100}%;background:#22c55e"></u></div>
+ <div class="flip" onclick="this.classList.toggle('on')"><div class="fi"><div class="ff card"><small>Вопрос</small><div>${esc(c.f)}</div>${c.i?fig({img:c.i}):''}</div><div class="ff fb card"><small>Ответ</small><div>${esc(c.b)}</div></div></div></div>
+ <p class="mu center">Нажмите на карточку (или пробел), чтобы перевернуть</p><div class="row"><button class="btn g2" onclick="rate(0)">↻ Повторить</button><button class="btn" onclick="rate(1)">✓ Знаю</button></div>`);kx()}
+function rate(k){const d=S.deck,i=d.q.shift();if(k)d.kn++;else d.q.push(i);card()}
+document.addEventListener('keydown',e=>{if(!S.deck||!$('.flip')||/INPUT|TEXTAREA/.test(e.target.tagName))return;if(e.code=='Space'){e.preventDefault();$('.flip').classList.toggle('on')}if(e.key=='ArrowRight')rate(1);if(e.key=='ArrowLeft')rate(0)});
+function calcEval(src,deg,ans){
+ const s=String(src).replace(/×/g,'*').replace(/÷/g,'/').replace(/[−–—]/g,'-').replace(/,/g,'.').replace(/π/g,' pi ').replace(/√/g,' sqrt ').toLowerCase();
+ const T=[],re=/\s*(\d+\.?\d*|\.\d+|[a-z]+|[-+*\/^()!%])/y;let i=0,m;
+ while(i<s.length){re.lastIndex=i;m=re.exec(s);if(!m){if(/^\s*$/.test(s.slice(i)))break;throw new Error('tok')}T.push(m[1]);i=re.lastIndex}
+ if(!T.length)throw new Error('empty');
+ let p=0;const pk=()=>T[p],nx=()=>T[p++];
+ const R=x=>deg?x*Math.PI/180:x,D=x=>deg?x*180/Math.PI:x,Z=r=>Math.abs(r)<1e-12?0:r;
+ const F={sin:x=>Z(Math.sin(R(x))),cos:x=>Z(Math.cos(R(x))),tan:x=>{const c=Math.cos(R(x));if(Math.abs(c)<1e-12)throw new Error('tan');return Z(Math.sin(R(x))/c)},
+  asin:x=>D(Math.asin(x)),acos:x=>D(Math.acos(x)),atan:x=>D(Math.atan(x)),ln:Math.log,log:Math.log10,sqrt:Math.sqrt,abs:Math.abs};
+ const fact=n=>{if(n<0||n!==Math.floor(n)||n>170)throw new Error('fact');let r=1;for(let k=2;k<=n;k++)r*=k;return r};
+ const close=()=>{if(pk()===')')nx()};
+ function expr(){let v=term();while(pk()==='+'||pk()==='-')v=nx()==='+'?v+term():v-term();return v}
+ function term(){let v=unary();for(;;){const t=pk();if(t==='*'){nx();v*=unary()}else if(t==='/'){nx();v/=unary()}else if(t!==undefined&&(t==='('||/^[\d.a-z]/.test(t)))v*=unary();else return v}}
+ function unary(){if(pk()==='-'){nx();return -unary()}if(pk()==='+'){nx();return unary()}return pow()}
+ function pow(){const b=post();if(pk()==='^'){nx();return Math.pow(b,unary())}return b}
+ function post(){let v=atom();for(;;){if(pk()==='!'){nx();v=fact(v)}else if(pk()==='%'){nx();v/=100}else return v}}
+ function atom(){const t=nx();if(t===undefined)throw new Error('end');
+  if(/^[\d.]/.test(t))return parseFloat(t);
+  if(t==='('){const v=expr();close();return v}
+  if(t==='pi')return Math.PI;if(t==='e')return Math.E;if(t==='ans')return ans||0;
+  if(F[t]){let a;if(pk()==='('){nx();a=expr();close()}else a=unary();return F[t](a)}
+  throw new Error('bad '+t)}
+ const v=expr();if(p<T.length)throw new Error('extra');
+ if(!isFinite(v)||isNaN(v))throw new Error('nan');
+ return parseFloat(v.toPrecision(12))}
+function calcFmt(r){if(r!==0&&(Math.abs(r)>=1e15||Math.abs(r)<1e-6)){const [m,e]=r.toExponential(6).split('e');return m.replace(/\.?0+$/,'')+'×10^('+parseInt(e,10)+')'}return String(r)}
+
+/* ---------- calculator ---------- */
+const CALC=['physics','algebra','chemistry','biology'];
+const CK={deg:true,ans:0,fresh:false,open:false};
+const CROWS=[['DEG','sin(','cos(','tan(','C'],['π','asin(','acos(','atan(','⌫'],['e','ln(','log(','√(','abs('],['(',')','%','!','÷'],['7','8','9','×','^'],['4','5','6','−','x²'],['1','2','3','+','1/x'],['0','.','×10ˣ','ANS','=']];
+function calcEnsure(){if($('#calc'))return;const d=document.createElement('div');d.id='calc';
+ d.innerHTML=`<div class="ch"><b>🧮 Калькулятор</b><button onclick="calcToggle()" aria-label="Закрыть">✕</button></div><input id="cin" inputmode="none" autocomplete="off" spellcheck="false" placeholder="0"><div id="cout">&nbsp;</div><div class="ck">${CROWS.flat().map(k=>`<button data-k="${k}" class="${/^[\d.]$/.test(k)?'n':k=='='?'eq':/^[+−×÷^]$/.test(k)?'op':''}" onclick="calcKey(this.dataset.k)">${k.length>1?k.replace('(',''):k}</button>`).join('')}</div>`;
+ document.body.appendChild(d);
+ calcDrag(d.querySelector('.ch'),d);
+ $('#cin').addEventListener('keydown',e=>{if(e.key=='Enter'){e.preventDefault();calcEq()}});
+ $('#cin').addEventListener('input',()=>{CK.fresh=false});['input','keyup','click','select','focus','mouseup'].forEach(ev=>$('#cin').addEventListener(ev,()=>{const i=$('#cin');if(i.selectionStart!=null)CK.pos=[i.selectionStart,i.selectionEnd]}));calcDeg()}
+function calcDrag(h,d){let o=null;h.style.cursor='move';h.style.touchAction='none';h.title='Перетащите, чтобы переместить';
+ h.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;const r=d.getBoundingClientRect();o=[e.clientX-r.left,e.clientY-r.top];h.setPointerCapture(e.pointerId)});
+ h.addEventListener('pointermove',e=>{if(!o)return;const x=Math.min(Math.max(0,e.clientX-o[0]),innerWidth-d.offsetWidth),y=Math.min(Math.max(0,e.clientY-o[1]),innerHeight-d.offsetHeight);d.style.left=x+'px';d.style.top=y+'px';d.style.right='auto';d.style.bottom='auto'});
+ const up=()=>{o=null};h.addEventListener('pointerup',up);h.addEventListener('pointercancel',up)}
+function calcDeg(){const b=document.querySelector('#calc [data-k="DEG"]');if(b)b.textContent=CK.deg?'DEG':'RAD'}
+function calcToggle(){CK.open=!CK.open;calcEnsure();calcSync();if(CK.open&&window.matchMedia&&!matchMedia('(pointer:coarse)').matches)$('#cin').focus()}
+function calcSync(){const d=$('#calc');if(d)d.style.display=CK.open&&S.sub&&CALC.includes(S.sub.id)?'block':'none';
+ document.querySelectorAll('[onclick="calcToggle()"].btn').forEach(b=>b.classList.toggle('act',CK.open))}
+const cv=v=>{const i=$('#cin');i.value=v;CK.pos=[v.length,v.length]};
+function calcPos(){const i=$('#cin'),n=i.value.length;let a=CK.pos?CK.pos[0]:n,b=CK.pos?CK.pos[1]:n;a=Math.min(Math.max(a,0),n);b=Math.min(Math.max(b,a),n);return[a,b]}
+function calcIns(t){const i=$('#cin');if(CK.fresh&&/^[\dπ.(a-z√]/i.test(t))cv('');CK.fresh=false;
+ const[a,b]=calcPos();i.value=i.value.slice(0,a)+t+i.value.slice(b);CK.pos=[a+t.length,a+t.length]}
+function calcEq(){const i=$('#cin'),o=$('#cout');if(!i.value.trim())return;try{const r=calcEval(i.value,CK.deg,CK.ans),f=calcFmt(r);CK.ans=r;o.classList.remove('err');o.textContent=i.value+' = '+f;cv(f);CK.fresh=true}catch(e){o.classList.add('err');o.textContent='Ошибка в выражении'}}
+function calcKey(k){const i=$('#cin'),o=$('#cout');
+ if(k=='C'){cv('');o.classList.remove('err');o.innerHTML='&nbsp;';CK.fresh=false;return}
+ if(k=='DEG'){CK.deg=!CK.deg;calcDeg();return}
+ if(k=='='){calcEq();return}
+ if(k=='⌫'){CK.fresh=false;const[a,b]=calcPos();if(a!=b){i.value=i.value.slice(0,a)+i.value.slice(b);CK.pos=[a,a]}else if(a>0){i.value=i.value.slice(0,a-1)+i.value.slice(a);CK.pos=[a-1,a-1]}return}
+ if(k=='1/x'){cv(i.value?'1/('+i.value+')':'1/(');CK.fresh=false;return}
+ calcIns(k=='x²'?'^2':k=='×10ˣ'?'×10^(':k=='ANS'?'ans':k)}
+/* ---------- annotation (drawing) ---------- */
+const ANN={on:false,pan:false,tool:'p',color:'#ef4444',size:4,data:{},cv:null,cx:null,key:'',cur:null,raf:0};
+const ACOL=['#ef4444','#f59e0b','#facc15','#22c55e','#3b82f6','#a855f7','#ffffff','#111111'];
+const annKey=()=>S.sub?S.sub.id+'|'+S.tab+'|'+(S.tab=='test'&&S.run?(S.run.done?'r':S.run.cur):'')+(S.tab=='cards'&&S.deck&&S.deck.q.length?'c'+S.deck.q[0]:''):'home';
+function annEnsure(){if(ANN.cv)return;const c=document.createElement('canvas');c.id='ann';document.body.appendChild(c);ANN.cv=c;ANN.cx=c.getContext('2d');
+ c.addEventListener('pointerdown',annDown);c.addEventListener('pointermove',annMove);c.addEventListener('pointerup',annUp);c.addEventListener('pointercancel',annUp);
+ if(window.ResizeObserver)new ResizeObserver(annSize).observe(M);addEventListener('resize',annSize);annBar()}
+function annSize(){const c=ANN.cv;if(!c)return;const dpr=Math.min(window.devicePixelRatio||1,2),w=document.documentElement.clientWidth,h=Math.ceil(Math.max(innerHeight,M.getBoundingClientRect().bottom+scrollY));
+ if(c.style.width==w+'px'&&c.style.height==h+'px'&&c.width==Math.round(w*dpr))return;
+ c.style.width=w+'px';c.style.height=h+'px';c.width=Math.round(w*dpr);c.height=Math.round(h*dpr);ANN.cx.setTransform(dpr,0,0,dpr,0,0);annDraw()}
+function annStroke(k){const cx=ANN.cx;cx.save();cx.lineCap=cx.lineJoin='round';cx.lineWidth=k.s;
+ if(k.t=='e'){cx.globalCompositeOperation='destination-out';cx.strokeStyle='#000'}else{cx.strokeStyle=k.c;if(k.t=='m')cx.globalAlpha=.35}
+ cx.beginPath();k.p.forEach((q,i)=>i?cx.lineTo(q[0],q[1]):cx.moveTo(q[0],q[1]));if(k.p.length==1)cx.lineTo(k.p[0][0]+.01,k.p[0][1]);cx.stroke();cx.restore()}
+function annDraw(){const c=ANN.cv;if(!c)return;ANN.cx.save();ANN.cx.setTransform(1,0,0,1,0,0);ANN.cx.clearRect(0,0,c.width,c.height);ANN.cx.restore();(ANN.data[ANN.key]||[]).forEach(annStroke)}
+function annPt(e){return[Math.round((e.pageX)*10)/10,Math.round(e.pageY*10)/10]}
+function annDown(e){if(!ANN.on||ANN.pan)return;e.preventDefault();try{ANN.cv.setPointerCapture(e.pointerId)}catch(x){}
+ const k={t:ANN.tool,c:ANN.color,s:ANN.tool=='m'?ANN.size*3:ANN.tool=='e'?ANN.size*2:ANN.size,p:[annPt(e)]};(ANN.data[ANN.key]=ANN.data[ANN.key]||[]).push(k);ANN.cur=k;annDraw()}
+function annMove(e){if(!ANN.cur)return;e.preventDefault();ANN.cur.p.push(annPt(e));if(!ANN.raf)ANN.raf=requestAnimationFrame(()=>{ANN.raf=0;annDraw()})}
+function annUp(){if(ANN.cur){ANN.cur=null;annDraw()}}
+function annRefresh(){annEnsure();ANN.key=annKey();annSize();annDraw();annSync()}
+function annSync(){const c=ANN.cv;if(!c)return;c.style.pointerEvents=ANN.on&&!ANN.pan?'auto':'none';c.style.cursor=ANN.tool=='e'?'cell':'crosshair';$('#annbar').style.display=ANN.on?'flex':'none';
+ document.querySelectorAll('[onclick="annToggle()"].btn').forEach(b=>b.classList.toggle('act',ANN.on));
+ document.querySelectorAll('#annbar [data-t]').forEach(b=>b.classList.toggle('act',b.dataset.t==ANN.tool));
+ document.querySelectorAll('#annbar .sw').forEach(b=>b.classList.toggle('act',b.dataset.c==ANN.color));
+ const pb=$('#annpan');if(pb)pb.classList.toggle('act',ANN.pan);const pv=$('#annpv');if(pv){pv.style.width=pv.style.height=Math.max(4,Math.min(ANN.size*(ANN.tool=='m'?3:1),34))+'px';pv.style.background=ANN.tool=='e'?'#888':ANN.color}}
+function annBar(){const b=document.createElement('div');b.id='annbar';
+ b.innerHTML=`<button data-t="p" onclick="ANN.tool='p';annSync()" title="Карандаш">✏️</button><button data-t="m" onclick="ANN.tool='m';annSync()" title="Маркер">🖍</button><button data-t="e" onclick="ANN.tool='e';annSync()" title="Ластик">🧽</button><span class="sep"></span>${ACOL.map(c=>`<button class="sw" data-c="${c}" style="background:${c}" onclick="annColor('${c}')" aria-label="Цвет ${c}"></button>`).join('')}<input type="color" id="anncol" value="${ANN.color}" title="Свой цвет" oninput="annColor(this.value)"><span class="sep"></span><input type="range" id="annsz" min="1" max="40" value="${ANN.size}" title="Размер кисти" oninput="ANN.size=+this.value;annSync()"><i id="annpv"></i><span class="sep"></span><button id="annpan" onclick="ANN.pan=!ANN.pan;annSync()" title="Прокрутка страницы">✋</button><button onclick="annUndo()" title="Отменить">↶</button><button onclick="annClear()" title="Очистить рисунок на этой странице">🗑</button><button onclick="annToggle()" title="Выйти из режима">✕ Готово</button>`;document.body.appendChild(b)}
+function annColor(c){ANN.color=c;if(ANN.tool=='e')ANN.tool='p';const i=$('#anncol');if(i&&/^#[0-9a-f]{6}$/i.test(c))i.value=c;annSync()}
+function annUndo(){const a=ANN.data[ANN.key];if(a&&a.length){a.pop();annDraw()}}
+function annClear(){const a=ANN.data[ANN.key];if(!a||!a.length){toast('Здесь пока нет рисунка');return}ask('Стереть весь рисунок на этой странице?',()=>{ANN.data[ANN.key]=[];annDraw()})}
+function annToggle(){annEnsure();ANN.on=!ANN.on;ANN.pan=false;ANN.key=annKey();annSize();annSync()}
+function annDrop(id){Object.keys(ANN.data).forEach(k=>{if(k.startsWith(id+'|'))delete ANN.data[k]});annDraw()}
+/* hooks: keep tools in sync with every re-render */
+{const _sh=shell;shell=function(b){_sh(b);annRefresh();calcSync()};const _hm=home;home=function(){_hm();annRefresh();calcSync()}}
+
+home();
+</script></body></html>
