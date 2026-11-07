@@ -1,0 +1,25 @@
+{
+  "name": "БТС AI — подготовка к экзамену",
+  "short_name": "БТС AI",
+  "description": "AI-приложение для подготовки к экзамену: генерация тестов, карточек и конспектов из PDF/DOCX, уровни сложности A/B/C, авторизация Google. Полностью бесплатно.",
+  "id": "/bts-prep/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#070a12",
+  "theme_color": "#0b0f1a",
+  "lang": "ru",
+  "dir": "ltr",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "AI-генератор", "short_name": "Генератор", "url": "./index.html#gen" },
+    { "name": "Документы", "short_name": "Файлы", "url": "./index.html#docs" },
+    { "name": "Прогресс", "short_name": "Прогресс", "url": "./index.html#dash" }
+  ]
+}
