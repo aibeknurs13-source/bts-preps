@@ -55,7 +55,7 @@ function hash32(s){ let h=2166136261; const n=normText(s); for(let i=0;i<n.lengt
 const ROUTES={};
 function route(){ return (location.hash||'#home').replace(/^#/,''); }
 function navigate(path){ location.hash=path; }
-window.addEventListener('hashchange',()=>{ render(); window.scrollTo(0,0); });
+window.addEventListener('hashchange',()=>{ closeModal(); render(); window.scrollTo(0,0); });
 
 /* ================= shell ================= */
 function renderRail(){
